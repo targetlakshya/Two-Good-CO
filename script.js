@@ -1,3 +1,8 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
 function videoconAnimation() {
     const videocon = document.querySelector('#video-container')
 var playbtn = document.querySelector("#play")
@@ -37,6 +42,14 @@ function loadingAnimation() {
         delay: 0.5,
         duration: 0.9,
         stagger: 0.4
+    
+    })
+    gsap.from('#page1 #video-container', {
+        scale: 0.9,
+        opacity: 0,
+        delay: 1.3,
+        duration: 0.3,
+        // stagger: 0.4
     
     })
 }
